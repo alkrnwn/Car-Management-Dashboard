@@ -18,7 +18,7 @@
  url : http://localhost:3000/api/v1/add
  method : POST
 ```
-<img src="https://user-images.githubusercontent.com/89620643/194509639-fbd0cf65-de19-4c5c-9b4d-8b07e7abba6a.png" width="380"/>
+
 
 - response-body 
 ```
@@ -101,7 +101,7 @@
  url : http://localhost:3000/api/v1/update/7
  method : POST
 ```
-<img src="https://user-images.githubusercontent.com/89620643/194515130-89fc7cec-3c5e-4042-a176-f3d0082dae59.png" width="380"/>
+
 
 - response-body 
 ```
