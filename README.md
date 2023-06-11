@@ -41,13 +41,9 @@
         "price": "Rp. 21",
         "photo": "photo-1665127434131-984422856.jpg",
         "id_car_size": 1,
-        "createdAt": "2022-10-07T07:18:27.000Z",
-        "updatedAt": "2022-10-07T07:23:54.000Z",
         "size": {
             "id": 1,
             "car_size": "Small",
-            "createdAt": "2022-10-07T00:45:02.000Z",
-            "updatedAt": "2022-10-07T00:45:02.000Z"
         }
     },
     {
@@ -56,13 +52,9 @@
         "price": "Rp. 1.000.000",
         "photo": "photo-1665129168030-603374137.jpeg",
         "id_car_size": 3,
-        "createdAt": "2022-10-07T07:52:48.000Z",
-        "updatedAt": "2022-10-07T07:52:48.000Z",
         "size": {
             "id": 3,
             "car_size": "Large",
-            "createdAt": "2022-10-07T00:45:24.000Z",
-            "updatedAt": "2022-10-07T00:45:24.000Z"
         }
     }
 ]
@@ -82,13 +74,9 @@
     "price": "Rp. 1.000.000",
     "photo": "photo-1665129168030-603374137.jpeg",
     "id_car_size": 3,
-    "createdAt": "2022-10-07T07:52:48.000Z",
-    "updatedAt": "2022-10-07T07:52:48.000Z",
     "size": {
         "id": 3,
         "car_size": "Large",
-        "createdAt": "2022-10-07T00:45:24.000Z",
-        "updatedAt": "2022-10-07T00:45:24.000Z"
     }
 }
 ```
@@ -151,26 +139,18 @@
     {
         "id": 1,
         "car_size": "Small",
-        "createdAt": "2022-10-07T00:45:02.000Z",
-        "updatedAt": "2022-10-07T00:45:02.000Z"
     },
     {
         "id": 2,
         "car_size": "Medium",
-        "createdAt": "2022-10-07T00:45:18.000Z",
-        "updatedAt": "2022-10-07T00:45:18.000Z"
     },
     {
         "id": 3,
         "car_size": "Large",
-        "createdAt": "2022-10-07T00:45:24.000Z",
-        "updatedAt": "2022-10-07T00:45:24.000Z"
     },
     {
         "id": 6,
         "car_size": "Ultra Large",
-        "createdAt": "2022-10-07T09:03:50.000Z",
-        "updatedAt": "2022-10-07T09:03:50.000Z"
     }
 ]
 ```
