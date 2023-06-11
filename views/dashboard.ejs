@@ -1,0 +1,80 @@
+    <%- include('layouts/header')  %> 
+    <!-- Modal -->
+    <div class="modal modal-fade rounded-0" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <img src="/image/modal.png" alt="" />
+            <h5 class="fw-bold mx-5">Menghapus Data Mobil</h5>
+            <p>Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin menghapus?</p>
+            <form method="post" class="mx-auto" id="modal-form">
+              <button type="submit" id="confirm-btn" style="width: 75px" class="btn btn-primary me-1" data-bs-dismiss="modal">Ya</button>
+              <a id="cancel-btn" style="width: 75px" class="btn btn-secondary ms-1" data-bs-dismiss="modal">Tidak</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('layouts/sidebar')  %> 
+    <%- include('layouts/navbar')  %> 
+      <section class="content">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item fw-bold"><a href="#">Cars</a></li>
+          <li class="breadcrumb-item" aria-current="page">List Car</li>
+        </ol>
+        <% if (message == "added") { %>
+        <div id="alert-message" class="alert alert-success alert-dismissible fade show border-0" role="alert" style="background-color: #73ca5c">
+          <h6 class="text-center text-white ps-4">Data Berhasil Disimpan</h6>
+        </div>
+        <% }else if(message == "deleted") {%>
+        <div id="alert-message" class="alert alert-danger alert-dismissible fade show border-0" role="alert" style="background-color: #151515">
+          <h6 class="text-center text-white ps-4">Data Berhasil Dihapus</h6>
+        </div>
+        <% }else if(message == "updated") {%>
+        <div id="alert-message" class="alert alert-primary alert-dismissible fade show border-0" style="background-color: #0d28a6" role="alert">
+          <h6 class="text-center text-white ps-4">Data Berhasil Diupdate</h6>
+        </div>
+        <% }%>
+        <div class="mt-3" id="head">
+          <h4>List Car</h4>
+          <a href="/add" class="btn btn-primary border-0 rounded-0 me-1" style="background-color: #0d28a6; height: 35px"><i class="fa-solid fa-plus me-2"></i>Add New Car</a>
+        </div>
+        <div class="filter mt-2">
+          <a href="/" class="btn btn-outline-primary me-2">All</a>
+          <a href="filter?size=small" class="btn btn-outline-primary me-2">Small</a>
+          <a href="filter?size=medium" class="btn btn-outline-primary me-2">Medium</a>
+          <a href="filter?size=large" class="btn btn-outline-primary me-2">Large</a>
+        </div>
+        <div id="car-card " class="me-2">
+          <div class="row mt-4">
+            <!-- car content -->
+            <% if(cars == false){ %>
+            <div class="container text-center mt-1">
+              <img src="/image/download (2).svg" style="margin-top: -80px; width: 500px" alt="">
+            </div>
+            <% } %>
+            <% cars.forEach(function(car){ %>
+            <div class="col-4 mb-3">
+              <div class="card" style="width: 390px">
+                <div class="card-body">
+                  <img src="<%= car.photo %>" class="card-img-top rounded mb-2" height="250px" style="object-fit: cover" alt="<%= car.photo %>" />
+                  <div class="card-desc mt-3">
+                    <h6><%= car.name_car %>/<%= car.size.car_size %></h6>
+                    <h5 class="fw-bold mt-2"><%= car.price %> / hari</h5>
+                    <p><img src="/image/clock.png" alt="clock" class="me-2 mt-@" />Updated at <%= time(car.updatedAt).format(' D MMM YYYY,HH.mm') %></p>
+                  </div>
+                  <div class="button">
+                    <button type="button" onclick="setValue('<%= car.id %>')" value="<%= car.id %>" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-outline-danger d-block" id="btn-del">
+                      <i class="fa-regular fa-trash-can"></i> Delete
+                    </button>
+                    <a href="/edit/<%= car.id %>" class="btn btn-success d-block" id="btn-edit"><i class="fa-regular fa-pen-to-square"></i> Edit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('layouts/footer')  %> 

@@ -1,0 +1,154 @@
+body {
+  display: flex;
+  width: 100vw;
+  overflow-x: hidden;
+  padding-right: 0 !important;
+}
+#staticBackdrop {
+  margin-top: 100px;
+}
+.modal-content {
+  margin: auto;
+  width: 400px;
+  border-radius: 2px;
+}
+.aside-1 {
+  position: fixed;
+  width: 90px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: #0d28a6;
+  color: #ffff;
+  height: 100vh;
+}
+.aside-img {
+  width: 20px;
+}
+.aside-1 p {
+  font-size: 12px;
+}
+main {
+  margin-left: 90px;
+  width: 100vw;
+}
+nav {
+  flex: 0 0 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: #ffffff;
+  position: fixed;
+  height: 70px;
+  padding: 20px;
+  display: flex;
+}
+.nav-content{
+  margin-left: 100px;
+  flex: 0 0 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.sub-menu {
+  display: flex;
+}
+.search {
+  display: flex;
+}
+.profile {
+  margin: auto;
+  display: flex;
+}
+.aside-2 {
+  position: fixed;
+  margin-top: 70px;
+  background-color: white;
+  width: 200px;
+  height: 100%;
+}
+.content {
+  margin-left: 200px;
+  margin-top: 70px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  min-height: 90vh;
+}
+.list-group :nth-child(2) {
+  color: black;
+  font-weight: bold;
+  background-color: #cfd4ed;
+}
+.breadcrumb-item a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+);
+}
+#head {
+  display: flex;
+  justify-content: space-between;
+}
+#alert-message {
+  height: 55px;
+  width: 500px;
+  position: fixed;
+  z-index: 2;
+  margin-left: 300px;
+  margin-top: -25px;
+}
+.filter a {
+  color: #aeb7e1;
+  background-color: #ffffff;
+  border-color: #aeb7e1;
+  border-radius: 3px;
+}
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+#car-card {
+  min-height: 72vh;
+  z-index: -2;
+}
+#btn-del {
+  width: 48%;
+  border-radius: 3px;
+  outline-color: #fa2c5a;
+  color: #fa2c5a;
+}
+#btn-del:hover {
+  background-color: #fa2c5a;
+  outline-color: #ffffff;
+  color: #ffffff;
+}
+#btn-edit {
+  width: 48%;
+  border-radius: 3px;
+  background-color: #5cb85f;
+  border: none;
+}
+#add-card {
+  margin-right: 20px;
+  border: none;
+  border-radius: 2px;
+  margin-top: 12px;
+}
+
+#add-card input {
+  border-radius: 2px;
+}
+.add-car-btn {
+  margin-top: 120px;
+}
+#cancel-btn {
+  border-color: #0d28a6;
+  border-radius: 2px;
+  background-color: #ffff;
+  color: #0d28a6;
+  outline-color: #0d28a6;
+}
+#confirm-btn {
+  border-radius: 2px;
+  background-color: #0d28a6;
+}

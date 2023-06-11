@@ -1,0 +1,73 @@
+<%- include('layouts/header')  %> 
+<%- include('layouts/sidebar')  %> 
+<%- include('layouts/navbar')  %> 
+      <!-- add dis -->
+      <section class="content">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item fw-bold"><a href="#">Cars</a></li>
+          <li class="breadcrumb-item fw-bold"><a href="/"> List Car</a></li>
+          <li class="breadcrumb-item" aria-current="page">Add New Car</li>
+        </ol>
+        <div class="mt-1" id="head">
+          <h4>Add New Car</h4>
+        </div>
+        <div id="car-card">
+          <div class="card" id="add-card">
+            <div class="card-body">
+              <form action="/api/v1/add" method="POST" id="add-form" enctype="multipart/form-data" autocomplete="off">
+                <div class="p-3 mb-3">
+                  <div class="row mb-3">
+                    <div class="col-xl-2 col-lg-3">
+                      <label>Nama<label class="text-danger">*</label></label>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-7">
+                      <input name="name_car" placeholder="Avanza" id="name_car" class="form-control" required />
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-xl-2 col-lg-3">
+                      <label>Sewa Per Hari<label class="text-danger">*</label></label>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-7">
+                      <input type="text" name="price" placeholder="Rp.0,-" id="price" class="form-control" required />
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-xl-2 col-lg-3">
+                      <label>Ukuran<label class="text-danger">*</label></label>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-7">
+                      <select class="form-select rounded-0" name="id_car_size" aria-label="Default select example">
+                        <% sizes.forEach(function(size){ %>
+                        <option value="<%= size.id %>"><%= size.car_size %></option>
+                        <% }); %>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-2 col-lg-3">
+                      <label>Foto<label class="text-danger">*</label></label>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-7">
+                      <figure>
+                        <div class="input-group">
+                          <input type="file" name="photo" placeholder="gambar" class="form-control input-image border border-end-0" id="photo" accept="image/*" required />
+                          <span class="input-group-text border border-start-0" style="background-color: #ffff"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                        </div>
+                        <figcaption class="text-secondary mt-1" style="font-size: 10px">File size max. 2MB</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="add-car-btn">
+            <a href="/" class="btn btn-outline-primary" id="cancel-btn">Cancel</a>
+            <button type="submit" form="add-form" class="btn btn-primary" id="confirm-btn">Save</button>
+          </div>
+        </div>
+      </section> 
+    </main>
+    <script type="text/javascript" src="/script/rupiah.js"></script>
+    <%- include('layouts/footer')  %> 
